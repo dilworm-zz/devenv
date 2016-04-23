@@ -1,3 +1,4 @@
+#!/bin/bash
 #pyenv编译python可能需要的依赖库
 echo "123" | sudo -S apt-get -y install libc6-dev
 echo "123" | sudo -S apt-get -y install build-essential 
