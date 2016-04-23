@@ -1,3 +1,4 @@
+#!/bin/bash
 # github.com/yyuu/pyenv
 # Change bashrc to your own shell option file
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
