@@ -1,0 +1,15 @@
+CC=gcc
+CFLAGS=-I.
+DEPS=hellofunc.h
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+hello: hellomake.o hellofunc.o 
+	$(CC) -o $@ hellomake.o hellofunc.o $(CFLAGS) 
+
+
+
+
+clean:
+	rm *.o hello

@@ -1,0 +1,22 @@
+CC=gcc
+CFLAGS=-I.
+IDIR=./include
+LIBS=-lm
+ODIR=obj
+
+_DEPS=hellofunc.h
+DEPS=$(patsubst %, $(IDIR)/%,$(_DEPS))
+_OBJ=hellomake.o hellofunc.o
+OBJ=$(patsubst %, $(ODIR)/%,$(_OBJ))
+
+$(ODIR)/%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+hello: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS) 
+
+
+
+
+clean:
+	rm $(ODIR)/*.o hello

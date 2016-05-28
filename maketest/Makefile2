@@ -1,0 +1,9 @@
+CC=gcc
+CFLAGS=-I.
+
+hello: hellomake.o hellofunc.o
+	$(CC) -o hello hellomake.o hellofunc.o -I.
+
+
+clean:
+	rm *.o hello
