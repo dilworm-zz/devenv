@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+# Search and merge all files with .gitignore suffix under current directory.
 cmd="cat" 
 for file in ./*.gitignore
 do
