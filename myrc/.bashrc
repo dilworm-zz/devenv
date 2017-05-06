@@ -128,12 +128,11 @@ alias cls=clear
 alias CLS=clear
 alias fsk='ps aux |grep "skynet"|grep -v "grep"'
 alias rcli=redis-cli 
+alias thefuck=fuck
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH_LUACHECK=/usr/local/bin/luacheck/bin
 export PATH="$PATH_LUACHECK:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv virtualenv-init -)"
