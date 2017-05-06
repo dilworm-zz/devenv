@@ -1,0 +1,16 @@
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[user]
+	email = xxx@yy.com
+	name = gdi
+[core]
+	editor = vim
+[credential]
+	helper = cache --timeout=3600
