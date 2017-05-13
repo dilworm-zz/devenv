@@ -1,7 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -79,7 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
+    alias grep='grep --color=auto --exclude-dir=.svn --exclude=*.swp --exclude=*.so'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -127,6 +126,9 @@ fi
 alias cls=clear
 alias CLS=clear
 alias fsk='ps aux |grep "skynet"|grep -v "grep"'
+alias svnst='svn st'
+alias svndf='svn diff '
+alias svnsta='svn st|grep -E "M |C |A "'
 alias rcli=redis-cli 
 alias thefuck=fuck
 
