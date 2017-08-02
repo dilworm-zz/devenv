@@ -56,6 +56,7 @@ filetype plugin on
 set nu
 scriptencoding utf-8
 set fenc=utf-8
+set fencs=utf-8,gbk
 set tabstop=4
 set shiftwidth=4
 set expandtab 
