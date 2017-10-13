@@ -36,6 +36,7 @@ Plugin 'bling/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
+"Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -132,3 +133,6 @@ set sessionoptions-=blank " prevent :mksession from saving "other windowss " as 
 :map ,k <C-w>-<C-w>-<C-w>-
 :map ,j <C-w>+<C-w>+<C-w>+
 :nmap ,tb :exe "Tagbar"<CR>
+
+" syntastic c include dirs
+"let g:syntastic_c_include_dirs = ["/home/lk/code/ygd/skynet/3rd/lua"]
