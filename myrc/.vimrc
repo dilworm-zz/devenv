@@ -136,3 +136,7 @@ set sessionoptions-=blank " prevent :mksession from saving "other windowss " as 
 
 " syntastic c include dirs
 "let g:syntastic_c_include_dirs = ["/home/lk/code/ygd/skynet/3rd/lua"]
+
+" nerdtree
+" dont show .so .o files
+let NERDTreeIgnore=['\.so$', '\.o$', '\~$']
