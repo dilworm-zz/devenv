@@ -17,9 +17,35 @@ function get_conf_value() {
     eval $ret="'$value'"
 }
 
-
+# Usage:
 #conf="./conf" # 所有参数从这里读取,参数格式为 key = value
 #get_conf_value $conf db_host
 #get_conf_value $conf dev_svr
 #echo $db_host $dev_svr
 
+
+# assert fail, then exit
+function assert(){
+    local exp=$1
+    local errmsg=$2
+    
+    if [ "$exp" == "" ]; then
+        echo "Error: $errmsg"
+        exit 1
+    fi
+
+    if [ $exp == false ]; then
+        echo "Error: $errmsg"
+        exit 1
+    fi
+
+    if [ "$exp" == "0" ]; then
+        echo "Error: $errmsg"
+        exit 1
+    fi
+
+    if [ ! -e $exp ]; then
+        echo "Error: $errmsg"
+        exit 1
+    fi
+}
