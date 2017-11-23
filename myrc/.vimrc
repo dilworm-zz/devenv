@@ -127,12 +127,28 @@ endfunction
 
 set sessionoptions-=blank " prevent :mksession from saving "other windowss " as empty quickfix windows.
 "mapping
+let mapleader=","
 :nmap <F2> :wa<Bar>exe "mksession!" v:this_session<CR>
-:nmap ,h :exe "vertical res-10"<CR>
-:nmap ,l :exe "vertical res+10"<CR>
-:map ,k <C-w>-<C-w>-<C-w>-
-:map ,j <C-w>+<C-w>+<C-w>+
-:nmap ,tb :exe "Tagbar"<CR>
+:nmap <Leader>h :exe "vertical res-10"<CR>
+:nmap <Leader>l :exe "vertical res+10"<CR>
+:map <Leader>k <C-w>-<C-w>-<C-w>-
+:map <Leader>j <C-w>+<C-w>+<C-w>+
+:nmap <Leader>tb :exe "Tagbar"<CR>
+
+"## grep
+:nnoremap <Leader>giW :execute "grep! -RI ".shellescape(expand("<cWORD>"))." ."<cr>:copen<cr>
+:nnoremap <Leader>giw :execute "grep! -RI ".shellescape(expand("<cword>"))." ."<cr>:copen<cr>
+
+"## quickfix 
+:nmap <Leader>cc :cclose<cr>
+:nmap <Leader>co :copen<cr>
+:nnoremap <Leader>cn :cn<cr>
+:nnoremap <Leader>cp :cp<cr>
+
+"## replace,  l: line, b: to bottom, a: all
+:map <Leader>rl :s/<C-R>"/
+:map <Leader>rb :.,$s/<C-R>"/  
+:map <Leader>ra :.,$s/<C-R>"/
 
 " syntastic c include dirs
 "let g:syntastic_c_include_dirs = ["/home/lk/code/ygd/skynet/3rd/lua"]
