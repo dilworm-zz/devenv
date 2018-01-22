@@ -25,6 +25,7 @@ if [ ! -e ~/.gitconfig ]; then
     cp .gitconfig ~/.gitconfig
 fi
 
+# you should run "npm install -g jshint" first,if you dont have one
 if [ ! -e ~/.jshintrc ]; then
     print_not_exit ~/.jshintrc
     cp .gitconfig ~/.jshintrc
