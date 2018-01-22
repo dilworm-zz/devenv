@@ -25,4 +25,9 @@ if [ ! -e ~/.gitconfig ]; then
     cp .gitconfig ~/.gitconfig
 fi
 
+if [ ! -e ~/.jshintrc ]; then
+    print_not_exit ~/.jshintrc
+    cp .gitconfig ~/.jshintrc
+fi
+
 echo $0 done!
