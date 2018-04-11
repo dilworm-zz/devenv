@@ -37,6 +37,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'godlygeek/tabular'
 Plugin 'scrooloose/syntastic'
 "Plugin 'rust-lang/rust.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'mileszs/ack.vim'
+Plugin 'Yggdroot/LeaderF'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -107,13 +110,13 @@ syntax enable
 let g:molokai_original=1
 let g:rehas256=1
 set bg=light
-
+hi ColorColumn ctermbg=DarkCyan guibg=lighred
 
 "CtrlP setting
 let g:ctrlp_cmd = 'CtrlPBuffer'
 
 "hightlight column
-autocmd FileType lua,python,c,c++,mk,rb set cc=80
+autocmd FileType lua,python,c,c++,mk,rb,js,rs,go set cc=85
 map ,ch :call SetColorColumn() <CR>
 function! SetColorColumn()
   let col_num = virtcol(".")
