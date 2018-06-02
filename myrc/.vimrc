@@ -40,6 +40,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mileszs/ack.vim'
 Plugin 'Yggdroot/LeaderF'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,9 +68,9 @@ set expandtab
 set hlsearch
 set nobackup
 
+let mapleader=","
 "NERDTree setting
-
-map <C-n> :NERDTreeToggle<CR>
+:nmap <Leader>d :NERDTreeToggle<CR>
 "close NERDDTree when it is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | e
 
@@ -130,7 +131,6 @@ endfunction
 
 set sessionoptions-=blank " prevent :mksession from saving "other windowss " as empty quickfix windows.
 "mapping
-let mapleader=","
 :nmap <F2> :wa<Bar>exe "mksession!" v:this_session<CR>
 :nmap <Leader>h :exe "vertical res-10"<CR>
 :nmap <Leader>l :exe "vertical res+10"<CR>
