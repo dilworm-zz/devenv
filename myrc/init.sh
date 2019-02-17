@@ -21,6 +21,7 @@ fi
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH_LUACHECK=/usr/local/bin/luacheck/bin
+export PATH="$PATH_LUACHECK:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
